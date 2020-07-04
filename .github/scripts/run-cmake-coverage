@@ -17,4 +17,4 @@ ctest -V -LE Benchmark
 # Collect coverage data
 
 export TRAVIS_BRANCH=${GITHUB_REF}
-coveralls --root .. --build-root . --gcov-options '\-lp' -E ".*/3rdparty/.*" -E ".*/_.*" -E ".*/tests/.*" -E ".*/benchmarks/.*" -E "./CMake.*CompilerId.c"
+coveralls --root .. --build-root . --gcov-options '\-lp' -i core/ -i pull/ -i push/ -E ".*/tests/.*" -E ".*/benchmarks/.*"
